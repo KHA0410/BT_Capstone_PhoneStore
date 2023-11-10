@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  background-color: #cd1818;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.colorTextHeader {
+  color: white;
+}
+
+nav .logo {
+  font-size: 2rem;
+}
+
+nav .navHome a {
+  color: white !important;
+  font-weight: 700;
+}
+
+nav .menuLeft {
+  color: white;
+  cursor: pointer;
+}
+
+nav .menuLeft i {
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+.carouselPhone {
+  top: 100px;
+  height: 70vh;
+  background-color: white;
+}
+
+.carouselPhone .carousel-item {
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */

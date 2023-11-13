@@ -1,0 +1,60 @@
+body {
+  background-color: black;
+  height: 90vh;
+}
+
+header h1 {
+  font-size: 80px;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  transition: 0.3s;
+}
+header h1:hover {
+  color: red;
+}
+
+.content {
+  font-size: 80px;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+}
+.content a {
+  text-decoration: none;
+  color: white;
+}
+.content .admin img, .content .customer img {
+  margin-top: 50px;
+  width: 300px;
+  height: 300px;
+  transition: 0.5s;
+  border-radius: 30px;
+  background: white;
+}
+.content .admin img:hover, .content .customer img:hover {
+  border: 5px solid red;
+  width: 350px;
+  height: 350px;
+}
+.content .admin h1, .content .customer h1 {
+  margin-top: 10px;
+  position: relative;
+}
+.content .admin h1::before, .content .customer h1::before {
+  content: "";
+  height: 3px;
+  background: red;
+  position: absolute;
+  width: 0%;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+.content .admin:hover h1::before, .content .customer:hover h1::before {
+  width: 100%;
+}
+.content .admin:hover, .content .customer:hover {
+  color: red;
+  transition: 0.3s;
+}/*# sourceMappingURL=manage.css.map */

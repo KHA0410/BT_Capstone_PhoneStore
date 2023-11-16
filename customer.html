@@ -85,26 +85,52 @@
           <!-- Search -->
           <form class="d-flex">
             <input
-              class="form-control me-1 pe-lg-5"
+              class="form-control me-1 pe-lg-6"
               type="search"
               placeholder="Tìm kiếm sản phẩm"
               aria-label="Search"
             />
-            <button class="btn btn-dark" type="submit">
+            <button class="btn btn-dark me-5" type="submit">
               <i class="fa fa-search text-white"></i>
             </button>
           </form>
-          <ul class="navbar-nav menuLeft">
-            <li class="mx-3">
-              <a href=""></a><i class="fa fa-shopping-cart"></i>Giỏ hàng
-            </li>
-            <li class="mx-3">
-              <a href=""></a><i class="fa fa-user"></i>Tài khoản
-            </li>
-          </ul>
+          <!-- CART -->
+          <div class="cart">
+            <nav id="main-nav">
+              <a class="cart-button" href="#">
+                <span id="soLuong" class="bag-count">0</span>
+                <span id="cartCount" class="bag-icon">Bag</span>
+                <span class="bag-label">Giỏ hàng</span>
+              </a>
+            </nav>
+            <aside id="sidebar-cart">
+              <main>
+                <a href="#" class="close-button"
+                  ><span class="close-icon">X</span></a
+                >
+                <h2>Giỏ hàng <span class="count">0</span></h2>
+                <!-- Sản phẩm trong giỏ -->
+                <ul class="products">
+                  <li id="itemInCart"></li>
+                </ul>
+                <div class="totals">
+                  <div class="subtotal">
+                    <span class="label">Total:</span>
+                    <span class="amount">0</span>
+                  </div>
+                </div>
+                <div class="action-buttons d-flex justify-content-between">
+                  <a class="view-cart-button" href="#">Giỏ</a
+                  ><a class="checkout-button" href="#">Thanh toán </a>
+                </div>
+              </main>
+            </aside>
+            <div id="sidebar-cart-curtain"></div>
+          </div>
         </div>
       </nav>
     </header>
+
     <!-- CAROUSEL -->
     <section class="carouselPhone container-fluid">
       <div
@@ -160,48 +186,53 @@
       <h3>iPhone</h3>
       <div class="row list_iphone">
         <div class="col item_iphone">
-          <img
-            class="d-block ms-4"
-            src="./asset/img/img_iphone/logo_apple.png"
-            alt=""
-          />
-          <img src="./asset/img/img_iphone/iphone15prm.png" alt="" />
-          <h4>Iphone 15 pro max</h4>
-          <h5>33,390,000 vnđ</h5>
-          <button id="btnBuy" class="btn btn-danger">Buy now</button>
+          <img id="img" src="./asset/img/img_iphone/iphone15prm.png" alt="" />
+          <h4 id="name">Iphone 15 pro max</h4>
+          <span id="screen">6.5 inch</span><br />
+          <span id="backCamera">Cam trước 12 MP</span><br />
+          <span id="frontCamera">Cam sau 12MP</span><br />
+          <span id="desc">Hàng mới</span>
+
+          <h5 id="price">33,390,000 vnđ</h5>
+          <button type="iphone" onclick="btnBuy(this)" class="btn btn-danger">
+            Buy now
+          </button>
         </div>
         <div class="col item_iphone">
-          <img
-            class="d-block ms-4"
-            src="./asset/img/img_iphone/logo_apple.png"
-            alt=""
-          />
-          <img src="./asset/img/img_iphone/iphone15pr.png" alt="" />
-          <h4>Iphone 15 pro</h4>
-          <h5>29,990,000 vnđ</h5>
-          <button id="btnBuy" class="btn btn-danger">Buy now</button>
+          <img id="img" src="./asset/img/img_iphone/iphone15pr.png" alt="" />
+          <h4 id="name">Iphone 15 pro</h4>
+          <span id="screen">6.5 inch</span><br />
+          <span id="backCamera">Cam trước 12 MP</span><br />
+          <span id="frontCamera">Cam sau 12MP</span><br />
+          <span id="desc">Hàng mới</span>
+          <h5 id="price">29,990,000 vnđ</h5>
+          <button type="iphone" onclick="btnBuy(this)" class="btn btn-danger">
+            Buy now
+          </button>
         </div>
         <div class="col item_iphone">
-          <img
-            class="d-block ms-4"
-            src="./asset/img/img_iphone/logo_apple.png"
-            alt=""
-          />
-          <img src="./asset/img/img_iphone/iphone15p.png" alt="" />
-          <h4>Iphone 15 plus</h4>
-          <h5>25,930,000 vnđ</h5>
-          <button id="btnBuy" class="btn btn-danger">Buy now</button>
+          <img id="img" src="./asset/img/img_iphone/iphone15p.png" alt="" />
+          <h4 id="name">Iphone 15 plus</h4>
+          <span id="screen">6.5 inch</span><br />
+          <span id="backCamera">Cam trước 12 MP</span><br />
+          <span id="frontCamera">Cam sau 12MP</span><br />
+          <span id="desc">Hàng mới</span>
+          <h5 id="price">25,930,000 vnđ</h5>
+          <button type="iphone" onclick="btnBuy(this)" class="btn btn-danger">
+            Buy now
+          </button>
         </div>
         <div class="col item_iphone">
-          <img
-            class="d-block ms-4"
-            src="./asset/img/img_iphone/logo_apple.png"
-            alt=""
-          />
-          <img src="./asset/img/img_iphone/iphone15.png" alt="" />
-          <h4>Iphone 15</h4>
-          <h5>21,590,000 vnđ</h5>
-          <button id="btnBuy" class="btn btn-danger">Buy now</button>
+          <img id="img" src="./asset/img/img_iphone/iphone15.png" alt="" />
+          <h4 id="name">Iphone 15</h4>
+          <span id="screen">6.5 inch</span><br />
+          <span id="backCamera">Cam trước 12 MP</span><br />
+          <span id="frontCamera">Cam sau 12MP</span><br />
+          <span id="desc">Hàng mới</span>
+          <h5 id="price">21,590,000 vnđ</h5>
+          <button type="iphone" onclick="btnBuy(this)" class="btn btn-danger">
+            Buy now
+          </button>
         </div>
       </div>
     </section>
@@ -211,40 +242,53 @@
       <h3>Samsung</h3>
       <div class="row list_samsung">
         <div class="col item_samsung">
-          <img src="./asset/img/img_samsung/samfold.png" alt="" />
-          <h4>
-            Samsung Galaxy <br />
-            Z fold5
-          </h4>
-          <h5>29,990,000 vnđ</h5>
-          <button id="btnBuy" class="btn btn-danger">Buy now</button>
+          <img id="img" src="./asset/img/img_samsung/samfold.png" alt="" />
+          <h4 id="name">Samsung Galaxy Z fold5</h4>
+          <span id="screen">6.5 inch</span><br />
+          <span id="backCamera">Cam trước 12 MP</span><br />
+          <span id="frontCamera">Cam sau 12MP</span><br />
+          <span id="desc">Hàng mới</span>
+          <h5 id="price">29,990,000 vnđ</h5>
+          <button type="samsung" onclick="btnBuy(this)" class="btn btn-danger">
+            Buy now
+          </button>
         </div>
         <div class="col item_samsung">
-          <img src="./asset/img/img_samsung/samz.png" alt="" />
-          <h4>
-            Samsung Galaxy <br />
-            Z flip5
-          </h4>
-          <h5>16,990,000 vnđ</h5>
-          <button id="btnBuy" class="btn btn-danger">Buy now</button>
+          <img id="img" src="./asset/img/img_samsung/samz.png" alt="" />
+          <h4 id="name">Samsung Galaxy Z flip5</h4>
+          <span id="screen">6.5 inch</span><br />
+          <span id="backCamera">Cam trước 12 MP</span><br />
+          <span id="frontCamera">Cam sau 12MP</span><br />
+          <span id="desc">Hàng mới</span>
+          <h5 id="price">16,990,000 vnđ</h5>
+
+          <button type="samsung" onclick="btnBuy(this)" class="btn btn-danger">
+            Buy now
+          </button>
         </div>
         <div class="col item_samsung">
-          <img src="./asset/img/img_samsung/sams23u.png" alt="" />
-          <h4>
-            Samsung Galaxy <br />
-            S23 Ultra
-          </h4>
-          <h5>25,990,000 vnđ</h5>
-          <button id="btnBuy" class="btn btn-danger">Buy now</button>
+          <img id="img" src="./asset/img/img_samsung/sams23u.png" alt="" />
+          <h4 id="name">Samsung Galaxy S23 Ultra</h4>
+          <span id="screen">6.5 inch</span><br />
+          <span id="backCamera">Cam trước 12 MP</span><br />
+          <span id="frontCamera">Cam sau 12MP</span><br />
+          <span id="desc">Hàng mới</span>
+          <h5 id="price">25,990,000 vnđ</h5>
+          <button type="samsung" onclick="btnBuy(this)" class="btn btn-danger">
+            Buy now
+          </button>
         </div>
         <div class="col item_samsung">
-          <img src="./asset/img/img_samsung/sams23.png" alt="" />
-          <h4>
-            Samsung Galaxy <br />
-            S23
-          </h4>
-          <h5>14,990,000 vnđ</h5>
-          <button id="btnBuy" class="btn btn-danger">Buy now</button>
+          <img id="img" src="./asset/img/img_samsung/sams23.png" alt="" />
+          <h4 id="name">Samsung Galaxy S23</h4>
+          <span id="screen">6.5 inch</span><br />
+          <span id="backCamera">Cam trước 12 MP</span><br />
+          <span id="frontCamera">Cam sau 12MP</span><br />
+          <span id="desc">Hàng mới</span>
+          <h5 id="price">14,990,000 vnđ</h5>
+          <button type="samsung" onclick="btnBuy(this)" class="btn btn-danger">
+            Buy now
+          </button>
         </div>
       </div>
     </section>
@@ -296,7 +340,9 @@
           <ul>
             Liên hệ
             <li><i class="fa fa-home"></i>HCM, Việt Nam</li>
-            <li><i class="fa fa-envelope"></i>cyberphone@email.com</li>
+            <li>
+              <span><i class="fa fa-envelope"></i>cyber@email.com</span>
+            </li>
             <li><i class="fa fa-phone"></i>+84 123 456 789</li>
           </ul>
         </div>
@@ -319,5 +365,19 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Axios CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"
+      integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- My model -->
+    <script src="./customer/controller/cart.js"></script>
+    <script src="./customer/model/model.js"></script>
+    <script src="./customer/controller/render.js"></script>
+    <script src="./customer/controller/controller.js"></script>
   </body>
 </html>

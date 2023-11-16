@@ -1,16 +1,6 @@
+// Tạo lớp đối tượng Phone
 class Phone {
-  constructor(
-    ma,
-    name,
-    price,
-    screen,
-    backCamera,
-    frontCamera,
-    img,
-    desc,
-    type
-  ) {
-    this.ma = ma;
+  constructor(name, price, screen, backCamera, frontCamera, img, desc, type) {
     this.name = name;
     this.price = price;
     this.screen = screen;
